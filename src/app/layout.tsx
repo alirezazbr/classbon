@@ -1,4 +1,26 @@
 import "./globals.css";
+import { Figtree } from "next/font/google";
+import localFont from "next/font/local";
+import Header from "./_components/header/header";
+import Footer from "./_components/footer/footer";
+
+const figtree = Figtree({
+  display: "swap",
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-figtree",
+});
+
+const bZiba = localFont({
+  src: [
+    {
+      path: "../../public/fonts/B Ziba_0.ttf",
+      weight: "100",
+      style: "normal",
+    },
+  ],
+  variable: "--font-bZiba",
+});
 
 export default function RootLayout({
   children,
@@ -6,15 +28,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" dir="rtl">
-      <body className="flex flex-col min-h-screen font-bold uppercase">
-        <header className="bg-gray-200 flex items-center justify-center h-20">
-          Header
-        </header>
-        <div className="flex flex-1">{children}</div>
-        <footer className="bg-gray-200 flex items-center justify-center h-20">
-          Footer
-        </footer>
+    <html dir="rtl" className={`dark ${figtree.variable} ${bZiba.variable}`}>
+      <body className="min-h-screen grid grid-rows-[80px_1fr_auto] dark:bg-base-100 dark:text-base-content">
+        <Header />
+        <div className="flex flex-1 justify-center items-center">
+          {children}
+        </div>
+        <Footer />
       </body>
     </html>
   );
