@@ -52,6 +52,9 @@ const config: Config = {
   theme: {
     colors: tailwindColors,
     extend: {},
+    container: {
+      center: true,
+    },
   },
   darkMode: "class",
   plugins: [],
