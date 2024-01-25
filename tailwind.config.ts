@@ -51,9 +51,13 @@ const config: Config = {
   content: ["./src/app/**/*.{tsx,jsx}"],
   theme: {
     colors: tailwindColors,
-    extend: {},
     container: {
       center: true,
+    },
+    extend: {
+      backgroundImage: {
+        "hero-pattern": "url('/images/tile.svg')",
+      },
     },
   },
   darkMode: "class",
