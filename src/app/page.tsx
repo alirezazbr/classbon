@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Colors from "./_components/colors/colors";
+import Button from "./_components/button/button";
 
 export default function Home() {
   return (
@@ -19,6 +20,14 @@ export default function Home() {
               کلاسبن می تونی بدون محدودیت به قله های بالاتر صعود کنی. ما همیشه
               هواتونو داریم.
             </p>
+            <div className="mt-45 flex gap-4">
+              <Button variant="primary" size="large">
+                دوره های ری اکت و نکست
+              </Button>
+              <Button variant="primary" size="large">
+                مشاوره برنامه نویسی
+              </Button>
+            </div>
             <Image
               src="/images/frameworks.png"
               alt=""
