@@ -1,14 +1,20 @@
 .btn {
-  @apply no-underline inline-flex gap-2 h-12 px-7 border cursor-pointer select-none;
-  @apply items-center justify-center border-transparent transition duration-100 ease-in-out rounded-lg;
-  @apply border-base-200 bg-base-200 text-base-content outline-base-content;
-
-  @media (hover: hover) {
-    &:hover {
-      @apply border-base-300 bg-base-300;
-    }
+  @apply no-underline gap-2 h-12 px-7  border inline-flex  cursor-pointer select-none;
+  @apply items-center justify-center border-transparent text-center transition duration-100 ease-in-out rounded-lg;
+  &:active:hover,
+  &:active:focus {
+    transform: scale(0.97);
   }
 
+  /* default btn */
+  & {
+    @apply dark:border-base-200 dark:bg-base-200 dark:text-base-content  dark:outline-base-content;
+    @media (hover: hover) {
+      &:hover {
+        @apply dark:border-base-300 dark:bg-base-300;
+      }
+    }
+  }
   /* brand colors */
   &-primary {
     @apply dark:border-primary dark:bg-primary dark:text-primary-content dark:outline-primary;
@@ -76,6 +82,7 @@
       }
     }
   }
+
   /* btn variants */
   &-ghost {
     @apply border border-transparent bg-transparent text-current  outline-current;
@@ -196,14 +203,12 @@
     @apply w-full;
   }
   &-square {
+    @apply h-12 w-12 p-0;
     &:where(.btn-xs) {
       @apply h-6 w-6 p-0;
     }
     &:where(.btn-sm) {
       @apply h-8 w-8 p-0;
-    }
-    &:where(.btn-md) {
-      @apply h-12 w-12 p-0;
     }
     &:where(.btn-lg) {
       @apply h-16 w-16 p-0;
