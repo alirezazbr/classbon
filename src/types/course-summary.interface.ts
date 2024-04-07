@@ -6,11 +6,11 @@ export interface CourseSummary {
   courseCategoryId: number;
   duration: string;
   level: string;
-  levelNumber: CourseLevel; 
+  levelNumber: CourseLevel;
   averageReviewRating: number | null;
   numberOfReviews: number | null;
   coverImageId: number | null;
-  recoverStatus: string;
+  recordStatus: string;
   slug: string;
   subTitle: string;
   isFree: boolean;
