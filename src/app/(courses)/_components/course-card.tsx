@@ -15,6 +15,7 @@ export const CourseCard: React.FC<CourseCardProps> = ({
   duration,
   slug,
 }: CourseCardProps) => {
+  console.log("test");
   return (
     <div className="card">
       <figure>
